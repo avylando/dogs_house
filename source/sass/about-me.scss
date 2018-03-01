@@ -1,0 +1,284 @@
+.about-me {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+.about-me__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px 20px;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+   0 0 40px rgba(0, 0, 0, .1) inset;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-me__lanyard {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: -178px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.about-me__wrapper--show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.5s;
+}
+
+.about-me__wrapper--nojs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-me__illustration {
+  width: 200px;
+  // max-width: 280px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0px 20px 0 rgba(0,0,0,.5);
+}
+
+.about-me__bio {
+  width: 100%;
+  max-width: 560px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin-top: 30px;
+}
+
+.about-me__title {
+  font-size: 27px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-me__list {
+  font-size: 17px;
+  line-height: 26px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  &--add {
+    margin-left: 10px;
+  }
+}
+
+.place-tablet {
+  display: none;
+}
+
+.about-me__item {
+  // text-align: center;
+  margin-bottom: 10px;
+
+  &--add {
+    margin-bottom: 0;
+  }
+}
+
+.about-me__item-title {
+  font-weight: 600;
+}
+
+.about-me__link {
+  @include link-hover;
+}
+
+.about-me__button {
+  width: 180px;
+  margin-top: 30px;
+}
+
+.about-me__barcode {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about-me {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 0 6px rgba(61,66,69,0.05);
+  }
+
+  .about-me__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    height: 425px;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 0 auto;
+    box-shadow: none;
+    background-image: url("../img/badge-pocket.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .about-me__lanyard {
+    display: block;
+    top: -327px;
+  }
+
+  .about-me__illustration {
+    // order: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+  }
+
+  .about-me__bio {
+    // order: 3;
+    width: 70%;
+    // max-width: 425px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    margin-top: 64px;
+  }
+
+  .about-me__title {
+    // order: 2;
+    font-size: 24px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 43px;
+  }
+
+  .about-me__list {
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 0;
+
+    @media (min-width: 780px) {
+      font-size: 14px;
+    }
+  }
+
+  .about-me__item {
+    margin-bottom: 2px;
+
+    &--add {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: 780px) {
+      margin-bottom: 8px;
+
+      &--add {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .place-mobile {
+    display: none;
+  }
+
+  .place-tablet {
+    display: inline;
+  }
+
+  .about-me__button {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .about-me__barcode {
+    display: block;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    width: 200px;
+    height: 25px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .about-me {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .about-me__wrapper {
+    justify-content: flex-start;
+    width: 84%;
+    max-width: 900px;
+    height: 500px;
+    padding: 35px;
+  }
+
+  .about-me__lanyard {
+    top: -320px;
+  }
+
+  .about-me__illustration {
+    width: 270px;
+    height: 270px;
+  }
+
+  .about-me__bio {
+    width: 80%;
+    max-width: 500px;
+    padding-left: 45px;
+    margin-top: 85px;
+  }
+
+  .about-me__title {
+    font-size: 27px;
+    margin-bottom: 60px;
+  }
+
+  .about-me__list {
+    // font-size: 14px;
+  }
+
+  .about-me__item {
+    margin-bottom: 14px;
+
+    &--add {
+      margin-bottom: 0;
+    }
+  }
+
+  .about-me__button {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    margin-top: 0;
+  }
+
+  .about-me__barcode {
+    left: 30px;
+    bottom: 30px;
+    width: 275px;
+    height: 30px;
+  }
+
+}
+
+
+
+

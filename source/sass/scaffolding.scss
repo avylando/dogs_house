@@ -1,0 +1,144 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Book Antiqua";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/BookAntiqua-Regular.woff2") format("woff2"), url("../fonts/BookAntiqua-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Book Antiqua";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/BookAntiqua-Bold.woff2") format("woff2"), url("../fonts/BookAntiqua-Bold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+  // background-color: #f2f2f2;
+  // background-image: url('../img/bg-carbon.png');
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  // font-family: "Open Sans", "Tahoma", sans-serif;
+  font-family: 'Book Antiqua', 'Georgia', serif;
+  font-size: 18px;
+  font-weight: 400;
+  // text-transform: uppercase;
+  line-height: 24px;
+  color: $textcolor;
+  min-width: 320px;
+  background-color: #e4e9eb;
+
+  height: calc(100% + 1px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  min-width: 320px;
+  // max-width: 960px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $firmviolet;
+  padding: 10px 15px;
+  border: 2px solid $firmviolet;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $firmviolet;
+    transition: 0.3s;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.up-arrow {
+  opacity: 0;
+  z-index: 10000;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 1px;
+  height: 1px;
+  border-bottom: 15px solid #000000;
+  border-top: none;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.up-arrow--show {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.blackout {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.blackout--show {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .up-arrow {
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .up-arrow {
+    bottom: 50px;
+    right: 50px;
+  }
+
+}

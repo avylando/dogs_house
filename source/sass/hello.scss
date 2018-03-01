@@ -1,0 +1,90 @@
+.hello {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 1000px;
+  // filter: blur(5px);
+}
+
+.hello__inner {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-image: url('../img/black-labr.png');
+  background-size: 75% 75%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hello__banner {
+  z-index: 2;
+  margin: 0 auto;
+  width: 90%;
+  height: 170px;
+  text-align: center;
+}
+
+.hello__title {
+  font-family: 'Forum', cursive;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.hello__text {
+  font-size: 20px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .hello {
+    height: 560px;
+    // filter: blur(5px);
+  }
+
+  .hello__banner {
+    width: 80%;
+    height: 170px;
+  }
+
+  .hello__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .hello__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hello__title {
+    font-size: 50px;
+    line-height: 52px;
+
+  }
+
+  .hello__text {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+}
+
+
+
+
+
+
+
+

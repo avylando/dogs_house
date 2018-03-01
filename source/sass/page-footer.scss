@@ -1,0 +1,136 @@
+.page-footer {
+  // color: #ffffff;
+  width: 100%;
+  background-color: $firmblue;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page-footer__block {
+  width: 100%;
+
+  &--contacts {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &--social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.page-footer__link {
+  @include link-hover;
+}
+
+.page-footer__text {
+  font-size: 15px;
+
+  &--copyright {
+    font-size: 10px;
+  }
+}
+
+.page-footer__social-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer__social-item {
+  display: inline-block;
+
+  &--instagram {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+.page-footer__social-link {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  perspective: 200px;
+
+  &:hover > .page-footer__social-icon,
+  &:focus > .page-footer__social-icon {
+    transform: rotateY(360deg);
+    transition: 0.8s;
+  }
+}
+
+.page-footer__social-icon {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  fill: $textcolor;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .page-footer__wrapper {
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .page-footer__block {
+    width: 50%;
+
+    &--contacts {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .page-footer__text {
+    font-size: 15px;
+
+    &--copyright {
+      font-size: 10px;
+    }
+  }
+
+  .page-footer__social-list {
+
+  }
+
+  .page-footer__social-item {
+
+  }
+
+  .page-footer__social-link {
+    width: 60px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__text {
+    font-size: 18px;
+
+    &--copyright {
+      font-size: 12px;
+    }
+  }
+
+  .page-footer__social-link {
+      width: 85px;
+    }
+}
+

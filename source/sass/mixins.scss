@@ -1,0 +1,10 @@
+@mixin link-hover {
+  border-bottom: 1px dashed $textcolor;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+    transition: 0.5s;
+  }
+}
