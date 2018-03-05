@@ -1,7 +1,7 @@
 .hello {
   position: relative;
   padding-top: 200px;
-  padding-bottom: 1000px;
+  padding-bottom: 980px;
   // filter: blur(5px);
 }
 
@@ -14,7 +14,7 @@
   height: 1000px;
   background-image: url('../img/black-labr.png');
   background-size: 75% 75%;
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
 }
 
@@ -27,19 +27,21 @@
 }
 
 .hello__title {
-  font-family: 'Forum', cursive;
   font-size: 32px;
   line-height: 40px;
   text-align: center;
-  width: 80%;
-  max-width: 850px;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 40px;
 }
 
 .hello__text {
+  font-family: "Bell";
+  font-weight: bold;
   font-size: 20px;
   line-height: 30px;
+  text-transform: uppercase;
+  color: $firmcolor;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -69,14 +71,14 @@
 
 @media (min-width: $desktop-width) {
   .hello__title {
-    font-size: 50px;
-    line-height: 52px;
+    font-size: 72px;
+    line-height: 72px;
 
   }
 
   .hello__text {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 72px;
+    line-height: 72px;
   }
 
 }

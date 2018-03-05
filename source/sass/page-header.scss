@@ -78,10 +78,6 @@
   }
 }
 
-.page-header__flag-icon {
-  diszplay: block;
-}
-
 .page-header__nav {
   position: absolute;
   top: 0;
@@ -158,7 +154,7 @@
 
   .page-header__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 

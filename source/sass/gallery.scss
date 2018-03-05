@@ -1,83 +1,60 @@
-.portfolio {
-  // background-image: linear-gradient(to bottom, #f8ffdd 0%, #ddefff 100%);
+.gallery {
+  padding-top: 100px;
+  background-color: $add-bg;
   overflow: hidden;
 }
 
-.portfolio__main-wrapper {
+.gallery__main-wrapper {
   opacity: 0;
   transform: translateY(40px);
 }
 
-.portfolio__main-wrapper--show {
+.gallery__main-wrapper--show {
   opacity: 1;
   transform: translateY(0);
   transition: 1.5s ease-out;
 }
 
-.portfolio__main-wrapper--nojs {
+.gallery__main-wrapper--nojs {
   opacity: 1;
   transform: translateY(0);
 }
 
-.portfolio__wrapper {
+.gallery__wrapper {
   display: flex;
   flex-direction: column;
 
 }
 
-.portfolio__description {
-  order: 2;
-  width: 100%;
-}
-
-.portfolio__projects {
-  order: 1;
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.portfolio__slider,
-.portfolio__slider-nav {
+.gallery__slider {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
-.portfolio__slider-nav {
-  display: none;
-  margin-top: 30px;
-
-  .portfolio__slide {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 0 7px;
-    outline: none;
-    transition: 0.5s;
-
-    &:hover,
-    &:focus {
-      background-color: #adacac;
-    }
-  }
-
-  img {
-    cursor: pointer;
-  }
-
+.gallery__slide {
+  padding: 25px;
+  outline: none;
 }
 
-.portfolio__title {
+img {
+  cursor: pointer;
+}
+
+.gallery__title {
+  font-size: 30px;
+  text-transform: uppercase;
   text-align: center;
   margin-top: 0;
   margin-bottom: 60px;
 }
 
-.portfolio__text {
+.gallery__text {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.portfolio__tools {
+.gallery__tools {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -86,13 +63,13 @@
   padding-top: 0;
 }
 
-.portfolio__tool {
+.gallery__tool {
   z-index: 1;
   width: 28%;
   margin-bottom: 45px;
 }
 
-.portfolio__tool-link {
+.gallery__tool-link {
   display: block;
   outline: none;
   cursor: pointer;
@@ -106,7 +83,7 @@
   }
 }
 
-.portfolio__tool-icon {
+.gallery__tool-icon {
   display: block;
   margin: 0 auto;
   width: 80%;
@@ -114,55 +91,55 @@
 }
 
 @media (min-width: $tablet-width) {
-  .portfolio {
+  .gallery {
 
   }
 
-  .portfolio__wrapper {
+  .gallery__wrapper {
     width: 90%;
     margin: 0 auto;
   }
 
-  .portfolio__description {
+  .gallery__description {
 
   }
 
-  .portfolio__projects {
+  .gallery__projects {
 
     margin-bottom: 60px;
   }
 
 
-  .portfolio__slider-nav {
+  .gallery__slider-nav {
     display: block;
     margin-top: 30px;
 
   }
 
-  .portfolio__title {
+  .gallery__title {
     margin-bottom: 65px;
   }
 
-  .portfolio__text {
+  .gallery__text {
     margin-bottom: 30px;
   }
 
-  .portfolio__tools {
+  .gallery__tools {
     width: 100%;
     padding: 20px;
     padding-top: 0;
   }
 
-  .portfolio__tool {
+  .gallery__tool {
     width: 18%;
     margin-bottom: 45px;
   }
 
-  .portfolio__tool-link {
+  .gallery__tool-link {
 
   }
 
-  .portfolio__tool-icon {
+  .gallery__tool-icon {
     width: 95%;
     height: auto;
   }
@@ -171,57 +148,57 @@
 
 @media (min-width: $desktop-width) {
 
-  .portfolio {
+  .gallery {
     padding-bottom: 100px;
   }
 
-  .portfolio__wrapper {
+  .gallery__wrapper {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     margin: 0;
   }
 
-  .portfolio__projects {
+  .gallery__projects {
     order: 2;
     width: 50%;
     margin-bottom: 0;
   }
 
-  .portfolio__slider-nav {
+  .gallery__slider-nav {
     margin-top: 15px;
   }
 
-  .portfolio__description {
+  .gallery__description {
     order: 1;
     width: 45%;
     overflow: hidden;
   }
 
-  .portfolio__title {
+  .gallery__title {
     margin-bottom: 50px;
   }
 
-  .portfolio__text {
+  .gallery__text {
     margin-top: 0;
     margin-bottom: 20px;
   }
 
-  .portfolio__tools {
+  .gallery__tools {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  .portfolio__tool {
+  .gallery__tool {
     width: 33%;
     margin-top: 35px;
     margin-bottom: 0;
 
   }
 
-  .portfolio__tool-icon {
+  .gallery__tool-icon {
     width: 70%;
   }
 
