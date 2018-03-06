@@ -8,3 +8,16 @@
     transition: 0.5s;
   }
 }
+
+@mixin ttl-style {
+  font-size: 30px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin list-unstyle {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

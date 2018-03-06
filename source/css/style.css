@@ -483,8 +483,8 @@ template {
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
@@ -513,7 +513,7 @@ template {
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
-    font-size: 20px;
+    font-size: 40px;
     line-height: 1;
     color: white;
     text-shadow: 1px 1px 1px #000000;
@@ -649,6 +649,17 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
 .container {
   min-width: 320px;
   margin: 0 auto;
@@ -661,18 +672,17 @@ a {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #6B597F;
+  color: #2d313a;
   padding: 10px 15px;
-  border: 2px solid #6B597F;
-  border-radius: 10px;
-  background-color: transparent;
+  border: 2px solid #2d313a;
+  background-color: #ffffff;
   outline: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .button:hover, .button:focus {
     color: #ffffff;
-    background-color: #6B597F;
+    background-color: #2d313a;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
   .button:disabled {
@@ -1182,8 +1192,8 @@ a {
 
 .hello {
   position: relative;
-  padding-top: 200px;
-  padding-bottom: 980px; }
+  padding-top: 150px;
+  padding-bottom: 860px; }
 
 .hello__inner {
   z-index: 1;
@@ -1191,9 +1201,9 @@ a {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1000px;
+  height: 800px;
   background-image: url("../img/black-labr.png");
-  background-size: 75% 75%;
+  background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat; }
 
@@ -1275,13 +1285,14 @@ a {
 .callback__button {
   font-family: inherit;
   text-transform: uppercase;
-  font-size: 26px;
-  font-weight: bold;
-  width: 512px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 370px;
   height: 260px;
   background-image: url("../img/bone.png");
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   border: none;
   background-color: transparent;
   outline: none;
@@ -1481,13 +1492,15 @@ a {
     height: 70%; }
   .advantages__illustration {
     width: 100%;
-    min-height: 260px; }
+    min-height: 190px; }
   .advantages__icon {
     margin: 0 auto;
     display: block;
     width: 32%; }
   .advantages__description {
-    min-height: 410px; }
+    width: 81%;
+    min-height: 410px;
+    max-width: 410px; }
   .advantages__title {
     text-align: center;
     margin-top: 25px; }
@@ -1664,14 +1677,76 @@ img {
   .gallery__tool-icon {
     width: 70%; } }
 
-.about-me {
-  position: relative;
+.price {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.price__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.price__title {
+  font-size: 30px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 80px; }
+
+.price__illustration {
+  width: 500px;
+  padding: 20px; }
+
+.price__description {
+  width: calc(100% - 650px); }
+
+.price__table {
+  width: 100%;
+  border-collapse: collapse; }
+  .price__table td {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 2px solid #8d6e63; }
+    .price__table td:nth-child(odd) {
+      border-right: 2px solid #8d6e63; }
+
+.price__item {
+  font-size: 20px; }
+  .price__item--title {
+    font-size: 24px;
+    font-weight: bold; }
+  .price__item:last-child td {
+    border-bottom: none; }
+
+.price__sub-text {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 80px; }
+
+.reviews {
   padding-top: 100px;
   padding-bottom: 100px;
-  overflow-x: hidden; }
+  background-color: #eff2f4; }
 
-.about-me__wrapper {
-  position: relative;
+.reviews__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.reviews__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1679,227 +1754,85 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  padding: 25px 20px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  opacity: 0;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px); }
+  text-align: center;
+  width: 31%; }
 
-.about-me__lanyard {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: -178px;
-  left: 0;
-  right: 0;
-  margin: 0 auto; }
+.reviews__illustration {
+  width: 200px; }
 
-.about-me__wrapper--show {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 1.5s;
-  transition: 1.5s; }
+.reviews__title {
+  margin-top: 40px;
+  margin-bottom: 30px; }
 
-.about-me__wrapper--nojs {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0); }
+.reviews__text {
+  min-height: 170px; }
 
-.about-me__illustration {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.5); }
-
-.about-me__bio {
-  width: 100%;
-  max-width: 560px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 20px;
+.reviews__sub {
+  font-weight: bold;
+  text-align: right;
   margin-top: 30px; }
 
-.about-me__title {
-  font-size: 27px;
-  margin-top: 20px;
-  margin-bottom: 40px; }
-
-.about-me__list {
-  font-size: 17px;
-  line-height: 26px;
-  list-style: none;
-  padding-left: 0;
-  margin: 0; }
-  .about-me__list--add {
-    margin-left: 10px; }
-
-.place-tablet {
-  display: none; }
-
-.about-me__item {
-  margin-bottom: 10px; }
-  .about-me__item--add {
-    margin-bottom: 0; }
-
-.about-me__item-title {
-  font-weight: 600; }
-
-.about-me__link {
-  border-bottom: 1px dashed #2d313a;
-  -webkit-transition: 0.5s;
-  transition: 0.5s; }
-  .about-me__link:hover, .about-me__link:focus {
-    border-bottom-color: transparent;
-    -webkit-transition: 0.5s;
-    transition: 0.5s; }
-
-.about-me__button {
-  width: 180px;
-  margin-top: 30px; }
-
-.about-me__barcode {
-  display: none; }
-
-@media (min-width: 680px) {
-  .about-me {
-    padding-top: 100px;
-    padding-bottom: 200px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 0 6px rgba(61, 66, 69, 0.05);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 0 6px rgba(61, 66, 69, 0.05); }
-  .about-me__wrapper {
+@media (min-width: 1090px) {
+  .contacts {
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 70px;
+    margin-bottom: 105px; }
+  .contacts__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-    max-width: 800px;
-    height: 425px;
-    padding: 25px;
-    border-radius: 5px;
-    margin: 0 auto;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background-image: url("../img/badge-pocket.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%; }
-  .about-me__lanyard {
-    display: block;
-    top: -327px; }
-  .about-me__illustration {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px; }
-  .about-me__bio {
-    width: 70%;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 10px;
-    margin-top: 64px; }
-  .about-me__title {
-    font-size: 24px;
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 43px; }
-  .about-me__list {
-    font-size: 12px;
-    line-height: 22px;
-    padding-left: 0; } }
-  @media (min-width: 680px) and (min-width: 780px) {
-    .about-me__list {
-      font-size: 14px; } }
-
-@media (min-width: 680px) {
-  .about-me__item {
-    margin-bottom: 2px; }
-    .about-me__item--add {
-      margin-bottom: 0px; } }
-  @media (min-width: 680px) and (min-width: 780px) {
-    .about-me__item {
-      margin-bottom: 8px; }
-      .about-me__item--add {
-        margin-bottom: 0px; } }
-
-@media (min-width: 680px) {
-  .place-mobile {
-    display: none; }
-  .place-tablet {
-    display: inline; }
-  .about-me__button {
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    width: auto;
-    margin-top: 0; }
-  .about-me__barcode {
-    display: block;
-    position: absolute;
-    left: 25px;
-    bottom: 25px;
-    width: 200px;
-    height: 25px; } }
-
-@media (min-width: 1090px) {
-  .about-me {
-    padding-top: 200px;
-    padding-bottom: 200px; }
-  .about-me__wrapper {
+    padding-top: 56px; }
+  .contacts__list {
+    width: 50%; }
+  .contacts__title {
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0; }
+  .contacts__block {
+    font-size: 20px;
+    text-transform: none;
+    text-align: left;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 84%;
-    max-width: 900px;
-    height: 500px;
-    padding: 35px; }
-  .about-me__lanyard {
-    top: -320px; }
-  .about-me__illustration {
-    width: 270px;
-    height: 270px; }
-  .about-me__bio {
-    width: 80%;
-    max-width: 500px;
-    padding-left: 45px;
-    margin-top: 85px; }
-  .about-me__title {
-    font-size: 27px;
-    margin-bottom: 60px; }
-  .about-me__item {
-    margin-bottom: 14px; }
-    .about-me__item--add {
-      margin-bottom: 0; }
-  .about-me__button {
-    position: absolute;
-    right: 35px;
-    top: 35px;
-    margin-top: 0; }
-  .about-me__barcode {
-    left: 30px;
-    bottom: 30px;
-    width: 275px;
-    height: 30px; } }
+    width: 100%; }
+  .contacts__text {
+    margin-top: 0;
+    margin-bottom: 10px; }
+    .contacts__text span {
+      font-weight: bold; }
+  .contacts__button {
+    font-size: 18px;
+    width: 240px;
+    padding-bottom: 13px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 45px; }
+  .contacts__map {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0; }
+  .contacts__interactive-map {
+    width: 100%;
+    height: 320px; } }
 
 .page-footer {
   width: 100%;
-  background-color: #c1d9ff; }
+  background-color: #eff2f4; }
 
 .page-footer__wrapper {
   display: -webkit-box;
@@ -1909,8 +1842,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 50px;
   padding-bottom: 50px; }
 
@@ -1989,6 +1923,7 @@ img {
 
 @media (min-width: 680px) {
   .page-footer__wrapper {
+    position: relative;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2001,6 +1936,9 @@ img {
       text-align: left;
       margin-bottom: 0; }
   .page-footer__text {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
     font-size: 15px; }
     .page-footer__text--copyright {
       font-size: 10px; }

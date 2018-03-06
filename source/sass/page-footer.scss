@@ -1,13 +1,13 @@
 .page-footer {
   // color: #ffffff;
   width: 100%;
-  background-color: $firmblue;
+  background-color: $add-bg;
 }
 
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -84,6 +84,7 @@
 @media (min-width: $tablet-width) {
 
   .page-footer__wrapper {
+    position: relative;
     flex-direction: row;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -99,6 +100,9 @@
   }
 
   .page-footer__text {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
     font-size: 15px;
 
     &--copyright {

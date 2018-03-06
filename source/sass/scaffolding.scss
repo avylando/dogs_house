@@ -56,6 +56,17 @@ a {
   color: inherit;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
 .container {
   min-width: 320px;
   margin: 0 auto;
@@ -69,11 +80,10 @@ a {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: $firmviolet;
+  color: $textcolor;
   padding: 10px 15px;
-  border: 2px solid $firmviolet;
-  border-radius: 10px;
-  background-color: transparent;
+  border: 2px solid $textcolor;
+  background-color: #ffffff;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
@@ -81,7 +91,7 @@ a {
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: $firmviolet;
+    background-color: $textcolor;
     transition: 0.3s;
   }
 

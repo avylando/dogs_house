@@ -205,7 +205,7 @@
 
   .advantages__illustration {
     width: 100%;
-    min-height: 260px;
+    min-height: 190px;
   }
 
   .advantages__icon {
@@ -215,7 +215,9 @@
   }
 
   .advantages__description {
+    width: 81%;
     min-height: 410px;
+    max-width: 410px;
   }
 
   .advantages__title {
