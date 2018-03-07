@@ -106,19 +106,20 @@ a {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 1px;
-  height: 1px;
-  border-bottom: 15px solid #000000;
-  border-top: none;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  width: 50px;
+  height: 35px;
+  fill: $firmcolor;
   cursor: pointer;
   transition: opacity 0.3s;
 }
 
 .up-arrow--show {
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .blackout {

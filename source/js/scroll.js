@@ -10,19 +10,27 @@
   let header = document.querySelector('.page-header');
   let upArrow = document.querySelector('.up-arrow');
   let advantagesSection = document.querySelector('.advantages__wrapper');
-  let sliderSection = document.querySelector('.portfolio__main-wrapper');
-  let aboutMeSection = document.querySelector('.about-me__wrapper');
-  let cooperation = document.querySelector('.menu__link--cooperation');
-  let portfolio = document.querySelector('.menu__link--portfolio');
-  let aboutMe = document.querySelector('.menu__link--me');
-  let contacts = document.querySelector('.menu__link--contacts');
+  let sliderSection = document.querySelector('.gallery__main-wrapper');
+  let reviewsSection = document.querySelector('.reviews');
+  let priceSection = document.querySelector('.price');
+  let contactsSection = document.querySelector('.contacts');
+  let advBtn = document.querySelector('.menu__link--adv');
+  let galleryBtn = document.querySelector('.menu__link--gallery');
+  let priceBtn = document.querySelector('.menu__link--price');
+  let reviewsBtn = document.querySelector('.menu__link--reviews');
+  let contactsBtn = document.querySelector('.menu__link--contacts');
   let menuItems = document.querySelectorAll('.menu__link');
+  let banner = document.querySelector('.hello__banner');
+  let mainImg = document.querySelector('.hello__inner');
 
   // Activate sections
 
-  advantagesSection.classList.remove('advantages__wrapper--nojs');
-  sliderSection.classList.remove('portfolio__main-wrapper--nojs');
-  aboutMeSection.classList.remove('about-me__wrapper--nojs');
+  // advantagesSection.classList.remove('advantages__wrapper--nojs');
+  // sliderSection.classList.remove('gallery__main-wrapper--nojs');
+  priceSection.classList.remove('price--nojs');
+  // aboutMeSection.classList.remove('about-me__wrapper--nojs');
+  // banner.classList.remove('hello__banner--nojs');
+  mainImg.classList.remove('hello__inner--nojs');
 
   let timeout;
   let checkActiveItems = function (element) {
@@ -44,56 +52,62 @@
 
   }
 
-  let scrollValueComparator = function (scrollValue, advBpoint, portBpoint, aboutBpoint, contBpoint) {
+  let scrollValueComparator = function (scrollValue, advBpoint, galBpoint, priceBpoint, reviewsBpoint, contBpoint) {
     if (scrollValue <= advBpoint) {
       checkActiveItems();
     }
-    if (scrollValue > advBpoint && scrollValue <= portBpoint) {
+    if (scrollValue > advBpoint && scrollValue <= galBpoint) {
       advantagesSection.classList.add('advantages__wrapper--show');
-      checkActiveItems(cooperation);
+      checkActiveItems(advBtn);
     }
-    if (scrollValue > portBpoint && scrollValue <= aboutBpoint) {
-      sliderSection.classList.add('portfolio__main-wrapper--show');
-      checkActiveItems(portfolio);
+    if (scrollValue > galBpoint && scrollValue <= priceBpoint) {
+      sliderSection.classList.add('gallery__main-wrapper--show');
+      checkActiveItems(galleryBtn);
     }
-    if (scrollValue > aboutBpoint && scrollValue <= contBpoint) {
-      aboutMeSection.classList.add('about-me__wrapper--show');
-      checkActiveItems(aboutMe);
+    if (scrollValue > priceBpoint && scrollValue <= reviewsBpoint) {
+      priceSection.classList.add('price--show');
+      checkActiveItems(priceBtn);
+    }
+    if (scrollValue > reviewsBpoint && scrollValue <= contBpoint) {
+      reviewsSection.classList.add('reviews__wrapper--show');
+      checkActiveItems(reviewsBtn);
     }
     if (scrollValue > contBpoint) {
 
-      checkActiveItems(contacts);
+      checkActiveItems(contactsBtn);
     }
   }
 
   window.addEventListener('load', function () {
+    mainImg.classList.add('hello__inner--show');
+    // setTimeout(banner.classList.add('hello__banner--show'), 1);
     window.addEventListener('scroll', function () {
       let scrollTop = window.scrollY;
       console.log(scrollTop);
       if (scrollTop > 100) {
-        header.classList.add('page-header__mini');
+        // header.classList.add('page-header__mini');
         upArrow.classList.add('up-arrow--show');
-      } else if (header.classList.contains('page-header__mini')) {
-        header.classList.remove('page-header__mini');
+
+      } else {
+        // header.classList.remove('page-header__mini');
         upArrow.classList.remove('up-arrow--show');
       }
 
       if (currentWidth < tabletWidth) {
-        scrollValueComparator(scrollTop, 50, 1200, 2700, 3200);
+        scrollValueComparator(scrollTop, 50, 1200, 1800, 2700, 3200);
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-        scrollValueComparator(scrollTop, 100, 1050, 2600, 3200);
+        scrollValueComparator(scrollTop, 100, 1050, 1700, 2600, 3200);
       }
 
       if (currentWidth >= desktopWidth) {
-        scrollValueComparator(scrollTop, 500, 1200, 2250, 2800);
+        scrollValueComparator(scrollTop, 1200, 1800, 2500, 3660, 4360);
       }
     })
   })
 
   // Up arrow scroll to top
-
 
   upArrow.addEventListener('click', function () {
     window.animateScrollTo(0);
@@ -101,33 +115,34 @@
 
   // Menu items scroll
 
-  cooperation.addEventListener('click', function (evt) {
+  advBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     window.animateScrollTo(advantagesSection);
-    // widthScrollComparator(400, 575, 680);
-    checkActiveItems(cooperation);
+    checkActiveItems(advBtn);
   })
 
-  portfolio.addEventListener('click', function (evt) {
+  galleryBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    // widthScrollComparator(2200, 1540, 1515);
     window.animateScrollTo(sliderSection);
-    checkActiveItems(portfolio);
+    checkActiveItems(galleryBtn);
   })
 
-  aboutMe.addEventListener('click', function (evt) {
+  priceBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    // widthScrollComparator(3000, 2800, 2275);
-    window.animateScrollTo(aboutMeSection);
-    checkActiveItems(aboutMe);
+    window.animateScrollTo(priceSection);
+    checkActiveItems(priceBtn);
   })
 
-  contacts.addEventListener('click', function (evt) {
+  reviewsBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    // scrollTo(document.documentElement, 3800, 300);
-    // animatedScrollTo(document.body, 3800, 300, checkActiveItems(contacts));
-    window.animateScrollTo(3800);
+    window.animateScrollTo(reviewsSection);
+    checkActiveItems(reviewsBtn);
+  })
 
+  contactsBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    window.animateScrollTo(contactsSection);
+    checkActiveItems(contactsBtn);
   })
 
 })();

@@ -1,10 +1,10 @@
 .gallery {
-  padding-top: 100px;
   background-color: $add-bg;
   overflow: hidden;
 }
 
 .gallery__main-wrapper {
+  padding-top: 100px;
   opacity: 0;
   transform: translateY(40px);
 }

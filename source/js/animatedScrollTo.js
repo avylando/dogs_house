@@ -4,7 +4,7 @@
   // desiredOffset - page offset to scroll to
   // speed - duration of the scroll per 1000px
   function __ANIMATE_SCROLL_TO(desiredOffset) {
-    var topOffset = 150;
+    var topOffset = 80;
     var userOptions = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
     if (desiredOffset instanceof HTMLElement) {

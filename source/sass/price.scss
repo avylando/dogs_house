@@ -1,6 +1,39 @@
 .price {
   padding-top: 75px;
   padding-bottom: 75px;
+
+  .price__illustration {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  .price__description {
+    opacity: 0;
+  }
+}
+
+.price--show {
+  .price__illustration {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .price__description {
+    opacity: 1;
+    transition: 1.4s;
+  }
+}
+
+.price--nojs {
+  .price__illustration {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .price__description {
+    opacity: 1;
+  }
 }
 
 .price__wrapper {

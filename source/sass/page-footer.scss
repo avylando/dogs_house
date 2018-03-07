@@ -56,17 +56,23 @@
     margin-left: 40px;
     margin-right: 40px;
   }
+
+  &--fb {
+    margin-right: 40px;
+  }
 }
 
 .page-footer__social-link {
   display: inline-block;
   width: 100%;
   outline: none;
-  perspective: 200px;
+  // perspective: 200px;
 
   &:hover > .page-footer__social-icon,
   &:focus > .page-footer__social-icon {
-    transform: rotateY(360deg);
+    fill: $firmcolor-h;
+    // filter: brightness(1.7);
+    transform: rotate(360deg);
     transition: 0.8s;
   }
 }
@@ -75,7 +81,8 @@
   display: inline-block;
   width: 100%;
   height: auto;
-  fill: $textcolor;
+  border-radius: 50%;
+  fill: $firmcolor;
   transform-style: preserve-3d;
   transition: 0.5s;
 }
