@@ -1,15 +1,58 @@
-// .callback {
-//   position: relative;
-//   z-index: 10;
-//   min-height: 500px;
-//   padding-top: 90px;
-//   padding-bottom: 100px;
-//   // background-color: $add-bg;
-//   background-image: url('../img/dog-table.png');
-//   background-size: contain;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-// }
+.callback {
+  top: 35%;
+  width: 400px;
+  min-width: 280px;
+  font-size: 12px;
+}
+
+.callback__wrapper {
+  position: relative;
+  padding: 10px;
+}
+
+.callback__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    transition: 0.4s;
+  }
+}
+
+.callback__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.callback__block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &--name {
+    margin-bottom: 15px;
+  }
+}
+
+.callback__label {
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.callback__textfield {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.callback__button {
+  margin: 30px auto 0;
+}
 
 // // .callback__wrapper {
 // //   display: flex;

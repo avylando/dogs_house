@@ -1,5 +1,8 @@
 (function () {
-  let fbActivateButton = document.querySelector('.about-me__button');
+  let cbButton = document.querySelector('.hello__button');
+  let callback = document.querySelector('.callback');
+  let cbCloseButton = callback.querySelector('.callback__close');
+  let fbActivateButton = document.querySelector('.contacts__button');
   let feedback = document.querySelector('.feedback');
   let fbCloseButton = feedback.querySelector('.feedback__close');
 
@@ -54,8 +57,30 @@
     }
   }
 
+  let callbackShowClickHandler = function () {
+    modalShowClickHandler(callback, cbCloseButton, callbackCloseEscHandler, callbackCloseEnterHandler);
+  }
+
+  let callbackCloseClickHandler = function () {
+    modalCloseClickHandler(callback, cbCloseButton, callbackCloseEscHandler, callbackCloseEnterHandler);
+  }
+
+  let callbackCloseEscHandler = function (evt) {
+    if (evt.keyCode === 27) {
+      callbackCloseClickHandler();
+    }
+  }
+
+  let callbackCloseEnterHandler = function (evt) {
+    if (evt.keyCode === 13) {
+      callbackCloseClickHandler();
+    }
+  }
+
   fbActivateButton.addEventListener('click', feedbackShowClickHandler, true);
   fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
+  cbButton.addEventListener('click', callbackShowClickHandler, true);
+  cbCloseButton.addEventListener('click', callbackCloseClickHandler);
 
   let successCloseClickHandler = function () {
     modalCloseClickHandler(sendSuccess, ssCloseButton, successCloseEscHandler, successCloseEnterHandler);

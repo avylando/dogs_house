@@ -98,11 +98,16 @@
   }
 
   .page-footer__block {
-    width: 50%;
 
-    &--contacts {
-      text-align: left;
-      margin-bottom: 0;
+    &--logo {
+      position: absolute;
+      left: 50px;
+      top: 20px;
+      width: 150px;
+    }
+
+    &--social {
+      width: 50%;
     }
   }
 

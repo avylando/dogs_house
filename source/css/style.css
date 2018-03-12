@@ -1313,6 +1313,58 @@ a {
     font-size: 72px;
     line-height: 72px; } }
 
+.callback {
+  top: 35%;
+  width: 400px;
+  min-width: 280px;
+  font-size: 12px; }
+
+.callback__wrapper {
+  position: relative;
+  padding: 10px; }
+
+.callback__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+  .callback__close:hover, .callback__close:focus {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+
+.callback__title {
+  text-align: center;
+  margin-top: 0; }
+
+.callback__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+  .callback__block--name {
+    margin-bottom: 15px; }
+
+.callback__label {
+  white-space: nowrap;
+  padding-right: 10px; }
+
+.callback__textfield {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px; }
+
+.callback__button {
+  margin: 30px auto 0; }
+
 .advantages {
   z-index: 10;
   padding-bottom: 100px;
@@ -1733,6 +1785,12 @@ img {
   .price__item:last-child td {
     border-bottom: none; }
 
+.price__note {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 15px;
+  margin-top: 20px; }
+
 .price__sub-text {
   font-size: 32px;
   line-height: 36px;
@@ -1939,11 +1997,13 @@ img {
             flex-direction: row;
     padding-top: 50px;
     padding-bottom: 50px; }
-  .page-footer__block {
+  .page-footer__block--logo {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    width: 150px; }
+  .page-footer__block--social {
     width: 50%; }
-    .page-footer__block--contacts {
-      text-align: left;
-      margin-bottom: 0; }
   .page-footer__text {
     position: absolute;
     bottom: 30px;
@@ -1962,77 +2022,43 @@ img {
   .page-footer__social-link {
     width: 85px; } }
 
-@-webkit-keyframes flipInX {
+@-webkit-keyframes zoomIn {
   from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg) translateX(0px);
-            transform: perspective(400px) rotate3d(1, 0, 0, 90deg) translateX(0px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0; }
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1; }
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
-  to {
-    -webkit-transform: perspective(400px);
-            transform: perspective(400px); } }
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
 
-@keyframes flipInX {
+@keyframes zoomIn {
   from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg) translateX(0px);
-            transform: perspective(400px) rotate3d(1, 0, 0, 90deg) translateX(0px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0; }
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1; }
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
-  to {
-    -webkit-transform: perspective(400px);
-            transform: perspective(400px); } }
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
 
-@-webkit-keyframes flipOutX {
+@-webkit-keyframes zoomOut {
   from {
-    -webkit-transform: perspective(400px);
-            transform: perspective(400px); }
-  30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    opacity: 0; } }
+    opacity: 0;
+    z-index: -1; } }
 
-@keyframes flipOutX {
+@keyframes zoomOut {
   from {
-    -webkit-transform: perspective(400px);
-            transform: perspective(400px); }
-  30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     opacity: 1; }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    opacity: 0; } }
+    opacity: 0;
+    z-index: -1; } }
 
 .modal {
   position: fixed;
@@ -2050,8 +2076,8 @@ img {
 .modal--close {
   display: block;
   z-index: 0;
-  -webkit-animation-name: flipOutX;
-          animation-name: flipOutX;
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
   -webkit-animation-duration: 0.75s;
           animation-duration: 0.75s;
   -webkit-animation-fill-mode: both;
@@ -2064,8 +2090,8 @@ img {
   z-index: 10000;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-animation-name: flipInX;
-          animation-name: flipInX;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
   -webkit-animation-duration: 0.75s;
           animation-duration: 0.75s;
   -webkit-animation-fill-mode: both;

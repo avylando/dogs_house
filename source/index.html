@@ -296,7 +296,7 @@
             <table class="price__table">
               <tr class="price__item price__item--title">
                 <td class="price__text">Проживание</td>
-                <td class="price__text">Цена (за день)</td>
+                <td class="price__text">Цена (за день)*</td>
               </tr>
               <tr class="price__item">
                 <td class="price__text">до 10 дней</td>
@@ -311,6 +311,8 @@
                 <td class="price__value">400 р.</td>
               </tr>
             </table>
+            <small class="price__note">* В стоимость не входит питание собаки. Корм предоставляется хозяином. <br>
+              Возможно кормление питомца натуральной пищей или сухим кормом за дополнительную плату</small>
           </div>
         </div>
         <p class="price__sub-text">Каждый год Dogs'House посещают более 50 собак,
@@ -414,6 +416,9 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
+          <div class="page-footer__block page-footer__block--logo">
+            <img src="img/logo.png" alt="" srcset="" width="150" height="150">
+          </div>
         <div class="page-footer__block page-footer__block--social">
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
@@ -514,13 +519,35 @@
     <button type="button" class="send-success__button button">Закрыть</button>
   </div>
 
+  <div class="modal callback">
+    <div class="callback__wrapper">
+      <h2 class="callback__title">Оставьте Ваши контакты</h2>
+      <svg class="callback__close" width="14" height="14" tabindex="0">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+      <form action="phpmailer/mail.php" class="callback__form">
+        <div class="callback__block callback__block--name">
+          <label class="callback__label" for="username">Имя:</label>
+          <input class="callback__textfield" id="username" name="name" type="text" placeholder="Ваше имя*" required="">
+        </div>
+        <div class="callback__block">
+          <label class="callback__label" for="phone">Номер телефона:</label>
+          <input class="callback__textfield" id="phone" name="phone" type="tel" placeholder="+7 (9__) __ __ __">
+        </div>
+        <button type="button" class="callback__button button">Отправить</button>
+      </form>
+
+    </div>
+
+    </div>
+
   <!-- </div> -->
 
   <script src="js/libs/libs.min.js"></script>
   <script src="js/app/hamburger.min.js"></script>
   <script src="js/app/animatedScrollTo.min.js"></script>
   <script src="js/app/scroll.min.js"></script>
-  <!-- <script src="js/app/modal.min.js"></script> -->
+  <script src="js/app/modal.min.js"></script>
   <script src="js/app/backend.min.js"></script>
   <script src="js/app/form.min.js"></script>
   <script>
