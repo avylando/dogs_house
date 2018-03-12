@@ -20,17 +20,17 @@
   let reviewsBtn = document.querySelector('.menu__link--reviews');
   let contactsBtn = document.querySelector('.menu__link--contacts');
   let menuItems = document.querySelectorAll('.menu__link');
-  let banner = document.querySelector('.hello__banner');
-  let mainImg = document.querySelector('.hello__inner');
+  let helloHead = document.querySelector('.hello__head');
+  let poster = document.querySelector('.hello__poster');
 
   // Activate sections
 
   // advantagesSection.classList.remove('advantages__wrapper--nojs');
   // sliderSection.classList.remove('gallery__main-wrapper--nojs');
-  priceSection.classList.remove('price--nojs');
+  // priceSection.classList.remove('price--nojs');
   // aboutMeSection.classList.remove('about-me__wrapper--nojs');
-  // banner.classList.remove('hello__banner--nojs');
-  mainImg.classList.remove('hello__inner--nojs');
+  // helloHead.classList.remove('hello__head--nojs');
+  poster.classList.remove('hello__poster--nojs');
 
   let timeout;
   let checkActiveItems = function (element) {
@@ -57,19 +57,19 @@
       checkActiveItems();
     }
     if (scrollValue > advBpoint && scrollValue <= galBpoint) {
-      advantagesSection.classList.add('advantages__wrapper--show');
+      // advantagesSection.classList.add('advantages__wrapper--show');
       checkActiveItems(advBtn);
     }
     if (scrollValue > galBpoint && scrollValue <= priceBpoint) {
-      sliderSection.classList.add('gallery__main-wrapper--show');
+      // sliderSection.classList.add('gallery__main-wrapper--show');
       checkActiveItems(galleryBtn);
     }
     if (scrollValue > priceBpoint && scrollValue <= reviewsBpoint) {
-      priceSection.classList.add('price--show');
+      // priceSection.classList.add('price--show');
       checkActiveItems(priceBtn);
     }
     if (scrollValue > reviewsBpoint && scrollValue <= contBpoint) {
-      reviewsSection.classList.add('reviews__wrapper--show');
+      // reviewsSection.classList.add('reviews__wrapper--show');
       checkActiveItems(reviewsBtn);
     }
     if (scrollValue > contBpoint) {
@@ -79,8 +79,8 @@
   }
 
   window.addEventListener('load', function () {
-    mainImg.classList.add('hello__inner--show');
-    // setTimeout(banner.classList.add('hello__banner--show'), 1);
+    poster.classList.add('hello__poster--show');
+    // setTimeout(banner.classList.add('hello__head--show'), 1);
     window.addEventListener('scroll', function () {
       let scrollTop = window.scrollY;
       console.log(scrollTop);

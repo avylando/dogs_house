@@ -1,51 +1,25 @@
 .hello {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 725px;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
-.hello__inner {
-  z-index: -1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  opacity: 0;
-  // background-image: url('../img/big-head.png');
-  // background-size: contain;
-  // background-position-x: center;
-  // background-position-y: 540px;
-  // background-repeat: no-repeat;
-  transform: translateY(540px);
-}
-
-.hello__inner--show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 1.2s ease-out;
-}
-
-.hello__inner--nojs {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hello__banner {
+.hello__head {
   z-index: 2;
   margin: 0 auto;
   width: 90%;
   height: 170px;
   text-align: center;
+  margin-bottom: 100px;
   // opacity: 0;
 }
 
-// .hello__banner--show {
+// .hello__head--show {
 //   opacity: 1;
 //   transition: 0.8s;
 // }
 
-// .hello__banner--nojs {
+// .hello__head--nojs {
 //   opacity: 1;
 // }
 
@@ -58,7 +32,7 @@
   margin-bottom: 40px;
 }
 
-.hello__text {
+.hello__sub-title {
   font-family: "Bell";
   font-weight: bold;
   font-size: 20px;
@@ -70,13 +44,82 @@
   margin: 0 auto;
 }
 
+.hello__poster {
+  // z-index: -1;
+  // position: absolute;
+  // bottom: -50px;
+  // left: 0;
+  // right: 0;
+  padding-top: 470px;
+  margin: 0 auto;
+  width: auto;
+  max-width: 900px;
+  height: 800px;
+  opacity: 0;
+  background-image: url('../img/dog-table.png');
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transform: translateY(540px);
+}
+
+.hello__poster--show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.2s ease-out;
+}
+
+.hello__poster--nojs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hello__text {
+  width: 75%;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hello__button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  background-image: url('../img/bone.png');
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transform: scale(1);
+  transition: 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-filter: blur(0);
+    transform: scale(1.03) translateZ(0);
+    transition: 0.8s;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .hello {
-    height: 560px;
+    // height: 560px;
     // filter: blur(5px);
   }
 
-  .hello__banner {
+  .hello__head {
     width: 80%;
     height: 170px;
   }
@@ -86,7 +129,7 @@
     line-height: 45px;
   }
 
-  .hello__text {
+  .hello__sub-title {
     font-size: 20px;
     line-height: 30px;
   }
@@ -99,7 +142,7 @@
 
   }
 
-  .hello__text {
+  .hello__sub-title {
     font-size: 72px;
     line-height: 72px;
   }
