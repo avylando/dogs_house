@@ -1,29 +1,17 @@
 .gallery {
+  padding-top: 80px;
+  padding-bottom: 100px;
   // background-color: $add-bg;
   overflow: hidden;
-}
-
-.gallery__main-wrapper {
-  padding-top: 100px;
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.gallery__main-wrapper--show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 1.5s ease-out;
-}
-
-.gallery__main-wrapper--nojs {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
+}
 
+.gallery__title {
+  @include ttl-style;
 }
 
 .gallery__slider {
@@ -33,70 +21,26 @@
 }
 
 .gallery__slide {
-  padding: 25px;
+  padding: 10px;
   outline: none;
 }
 
-img {
-  cursor: pointer;
-}
+.gallery__image {
+  width: 320px;
 
-.gallery__title {
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 60px;
-}
-
-.gallery__text {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.gallery__tools {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 20px;
-  padding-top: 0;
-}
-
-.gallery__tool {
-  z-index: 1;
-  width: 28%;
-  margin-bottom: 45px;
-}
-
-.gallery__tool-link {
-  display: block;
-  outline: none;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.5s;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.2);
-    transition: transform 0.5s;
+  @media (min-width: 500px) {
+    width: 500px;
   }
-}
-
-.gallery__tool-icon {
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  height: auto;
 }
 
 @media (min-width: $tablet-width) {
   .gallery {
-
+    padding-top: 60px;
+    padding-bottom: 100px;
   }
 
   .gallery__wrapper {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -110,10 +54,12 @@ img {
   }
 
 
-  .gallery__slider-nav {
-    display: block;
-    margin-top: 30px;
+  .gallery__slide {
+    padding: 10px;
+  }
 
+  .gallery__image {
+    width: 750px;
   }
 
   .gallery__title {
@@ -123,32 +69,12 @@ img {
   .gallery__text {
     margin-bottom: 30px;
   }
-
-  .gallery__tools {
-    width: 100%;
-    padding: 20px;
-    padding-top: 0;
-  }
-
-  .gallery__tool {
-    width: 18%;
-    margin-bottom: 45px;
-  }
-
-  .gallery__tool-link {
-
-  }
-
-  .gallery__tool-icon {
-    width: 95%;
-    height: auto;
-  }
-
 }
 
 @media (min-width: $desktop-width) {
 
   .gallery {
+    padding-top: 100px;
     padding-bottom: 100px;
   }
 
@@ -165,8 +91,12 @@ img {
     margin-bottom: 0;
   }
 
-  .gallery__slider-nav {
-    margin-top: 15px;
+  .gallery__slide {
+    padding: 20px;
+  }
+
+  .gallery__image {
+    width: 850px;
   }
 
   .gallery__description {

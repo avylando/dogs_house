@@ -2,10 +2,10 @@
 
 (function () {
 
-  let form = document.querySelector('.feedback__form');
+  let form = document.querySelector('.callback__form');
   let inputName = form.querySelector('#username');
-  let inputMail = form.querySelector('#email');
-  let feedbackWindow = document.querySelector('.feedback');
+  let inputPhone = form.querySelector('#phone');
+  let callbackWindow = document.querySelector('.callback');
   let blackout = document.querySelector('.blackout');
 
   let successWindow = function () {
@@ -17,30 +17,43 @@
     console.log(errorMessage);
   }
 
-  form.addEventListener('invalid', function (evt) {
-    if (inputName.validityState.valueMissing) {
-      inputName.setCustomValidity('Пожалуйста, заполните имя');
-    }
-  })
+  // let checkValidity = function () {
+  //   if (inputName.validity.valueMissing) {
+  //     inputName.setCustomValidity('Пожалуйста, заполните имя');
+  //   } else {
+  //     inputName.setCustomValidity('');
+  //   }
+
+  //   if (!inputPhone.validity.valid) {
+  //     inputPhone.setCustomValidity('Введите номер телефона');
+  //   } else {
+  //     inputPhone.setCustomValidity('');
+  //   }
+  // }
+
+  // form.addEventListener('invalid', function (evt) {
+  //   checkValidity();
+  // }, true);
 
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
+    // checkValidity();
 
     let formData = new FormData(form);
     window.sendRequest(formData, successWindow, errorWindow);
-    feedbackWindow.classList.remove('modal--show');
-    feedbackWindow.classList.add('modal--close');
+    callbackWindow.classList.remove('modal--show');
+    callbackWindow.classList.add('modal--close');
     blackout.classList.remove('blackout--show');
   })
 
-  let checkAgree = function () {
-    let submit = document.querySelector('.feedback__button');
-    let agreeCheck = document.querySelector('.feedback__agree-input');
-    agreeCheck.addEventListener('click', function () {
-      agreeCheck.checked ? submit.disabled = '' : submit.disabled = 'disabled';
-    })
-  }
+  // let checkAgree = function () {
+  //   let submit = document.querySelector('.feedback__button');
+  //   let agreeCheck = document.querySelector('.feedback__agree-input');
+  //   agreeCheck.addEventListener('click', function () {
+  //     agreeCheck.checked ? submit.disabled = '' : submit.disabled = 'disabled';
+  //   })
+  // }
 
-  checkAgree();
+  // checkAgree();
 
 })();

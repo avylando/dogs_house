@@ -1,10 +1,11 @@
 (function () {
   let cbButton = document.querySelector('.hello__button');
+  let cbButtonDouble = document.querySelector('.contacts__button');
   let callback = document.querySelector('.callback');
   let cbCloseButton = callback.querySelector('.callback__close');
-  let fbActivateButton = document.querySelector('.contacts__button');
-  let feedback = document.querySelector('.feedback');
-  let fbCloseButton = feedback.querySelector('.feedback__close');
+  // let fbActivateButton = document.querySelector('.contacts__button');
+  // let feedback = document.querySelector('.feedback');
+  // let fbCloseButton = feedback.querySelector('.feedback__close');
 
   let sendSuccess = document.querySelector('.send-success');
   let ssCloseButton = sendSuccess.querySelector('.send-success__button');
@@ -37,25 +38,25 @@
   }
 
 
-  let feedbackShowClickHandler = function () {
-    modalShowClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
-  }
+  // let feedbackShowClickHandler = function () {
+  //   modalShowClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+  // }
 
-  let feedbackCloseClickHandler = function () {
-    modalCloseClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
-  }
+  // let feedbackCloseClickHandler = function () {
+  //   modalCloseClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
+  // }
 
-  let feedbackCloseEscHandler = function (evt) {
-    if (evt.keyCode === 27) {
-      feedbackCloseClickHandler();
-    }
-  }
+  // let feedbackCloseEscHandler = function (evt) {
+  //   if (evt.keyCode === 27) {
+  //     feedbackCloseClickHandler();
+  //   }
+  // }
 
-  let feedbackCloseEnterHandler = function (evt) {
-    if (evt.keyCode === 13) {
-      feedbackCloseClickHandler();
-    }
-  }
+  // let feedbackCloseEnterHandler = function (evt) {
+  //   if (evt.keyCode === 13) {
+  //     feedbackCloseClickHandler();
+  //   }
+  // }
 
   let callbackShowClickHandler = function () {
     modalShowClickHandler(callback, cbCloseButton, callbackCloseEscHandler, callbackCloseEnterHandler);
@@ -77,9 +78,10 @@
     }
   }
 
-  fbActivateButton.addEventListener('click', feedbackShowClickHandler, true);
-  fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
+  // fbActivateButton.addEventListener('click', feedbackShowClickHandler, true);
+  // fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
   cbButton.addEventListener('click', callbackShowClickHandler, true);
+  cbButtonDouble.addEventListener('click', callbackShowClickHandler, true);
   cbCloseButton.addEventListener('click', callbackCloseClickHandler);
 
   let successCloseClickHandler = function () {

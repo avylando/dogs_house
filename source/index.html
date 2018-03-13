@@ -104,9 +104,14 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo">
           <div class="page-header__author">
-            <b class="page-header__author-name">DOGS' HOUSE</b>
-            <br>
-            <span class="page-header__author-sub">Гостиница для собак</span>
+            <div class="page-header__illustration">
+              <img src="img/logo.png" alt="dogs' house logo" class="page-header__image" width="50" height="50">
+            </div>
+            <div class="page-header__description">
+              <b class="page-header__author-name">DOGS' HOUSE</b>
+              <br>
+              <span class="page-header__author-sub">Гостиница для собак</span>
+            </div>
           </div>
           <button class="hamburger hamburger--spring" type="button">
             <span class="hamburger-box">
@@ -229,52 +234,82 @@
             <ul class="gallery__slider">
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/1-min.jpg" data-large-src="img/1.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/1-min.jpg">
+                    <img class="gallery__image" src="img/1.jpg" data-large-src="img/1.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/2-min.jpg" data-large-src="img/2.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/2-min.jpg">
+                    <img class="gallery__image" src="img/2.jpg" data-large-src="img/2.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/3-min.jpg" data-large-src="img/3.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/3-min.jpg">
+                    <img class="gallery__image" src="img/3.jpg" data-large-src="img/3.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/4-min.jpg" data-large-src="img/4.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/4-min.jpg">
+                    <img class="gallery__image" src="img/4.jpg" data-large-src="img/4.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/5-min.jpg" data-large-src="img/5.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/5-min.jpg">
+                    <img class="gallery__image" src="img/5.jpg" data-large-src="img/5.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/6-min.jpg" data-large-src="img/6.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/6-min.jpg">
+                    <img class="gallery__image" src="img/6.jpg" data-large-src="img/6.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/7-min.jpg" data-large-src="img/7.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/7-min.jpg">
+                    <img class="gallery__image" src="img/7.jpg" data-large-src="img/7.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/8-min.jpg" data-large-src="img/8.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/8-min.jpg">
+                    <img class="gallery__image" src="img/8.jpg" data-large-src="img/8.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/9-min.jpg" data-large-src="img/9.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/9-min.jpg">
+                    <img class="gallery__image" src="img/9.jpg" data-large-src="img/9.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
               <li class="gallery__slide">
                 <a href="" target="_blank">
-                  <img src="img/10-min.jpg" data-large-src="img/10.jpg">
+                  <picture>
+                    <source media="(max-width: 1090px)" srcset="img/10-min.jpg">
+                    <img class="gallery__image" src="img/10.jpg" data-large-src="img/10.jpg" width="300" height="100">
+                  </picture>
                 </a>
               </li>
             </ul>
@@ -390,13 +425,13 @@
             <div class="contacts__block contacts__block--mail">
               <p class="contacts__text">
                 <span>Телефон:</span>
-                <a class="contacts__link" href="#">994-914, 89149511554</a>
+                <a href="#">994-914, 89149511554</a>
               </p>
             </div>
             <div class="contacts__block contacts__block--mail">
               <p class="contacts__text">
                 <span>E-mail:</span>
-                <a class="contacts__link" href="#">dogshostel@yandex.ru</a>
+                <a class="contacts__link" href="mailto:houseofdogs@yandex.ru">houseofdogs@yandex.ru</a>
               </p>
             </div>
             <button class="contacts__button button" type="button">Напишите нам</button>
@@ -458,58 +493,27 @@
 
   </footer>
 
-  <div class="modal feedback">
-    <div class="feedback__wrapper">
-      <h2 class="feedback__title">Заполните форму для связи с Вами</h2>
-      <svg class="feedback__close" width="14" height="14" tabindex="0">
+  <div class="modal callback">
+    <div class="callback__wrapper">
+      <h2 class="callback__title">Оставьте Ваши контакты</h2>
+      <svg class="callback__close" width="14" height="14" tabindex="0">
         <use xlink:href="#icon-close"></use>
       </svg>
-      <form class="feedback__form" action="phpmailer/mail.php" method="post" enctype="multipart/form-data">
-
-        <div class="feedback__field">
-          <div class="feedback__block feedback__block--name">
-            <label class="feedback__label" for="username">Имя:</label>
-            <input class="feedback__textfield" id="username" name="name" type="text" placeholder="Ваше имя*" required="">
-          </div>
-          <div class="feedback__block feedback__block--surname">
-            <label class="feedback__label" for="surname">Фамилия:</label>
-            <input class="feedback__textfield" id="surname" name="surname" type="text" placeholder="Ваша фамилия">
-          </div>
+      <form action="../phpmailer/mail.php" class="callback__form">
+        <div class="callback__block callback__block--name">
+          <label class="callback__label" for="username">Имя: *</label>
+          <input class="callback__textfield" id="username" name="name" type="text" placeholder="Ваше имя" required="">
         </div>
-
-        <div class="feedback__field">
-          <div class="feedback__block feedback__block--contacts feedback__block--mail">
-            <label class="feedback__label" for="email">E-mail:</label>
-            <input class="feedback__textfield" id="email" name="email" type="email" placeholder="username@mail.com*" required="">
-            <svg class="feedback__contact-icon feedback__contact-icon--mail" width="18" height="18">
-              <use xlink:href="#icon-mail"></use>
-            </svg>
-          </div>
-          <div class="feedback__block feedback__block--contacts feedback__block--phone">
-            <label class="feedback__label" for="phone">Номер телефона:</label>
-            <input class="feedback__textfield" id="phone" name="phone" type="tel" placeholder="+7 (9__) __ __ __">
-            <svg class="feedback__contact-icon feedback__contact-icon--phone" width="18" height="14">
-              <use xlink:href="#icon-phone"></use>
-            </svg>
-          </div>
+        <div class="callback__block">
+          <label class="callback__label" for="phone">Номер телефона: *</label>
+          <input class="callback__textfield" id="phone" name="phone" type="tel" placeholder="+7 (9__) __ __ __" required="">
         </div>
-
-        <div class="feedback__field feedback__field--description">
-          <textarea class="feedback__textarea" name="additionally" placeholder="Дополнительная информация" maxlength="5000"></textarea>
-        </div>
-
-        <div class="feedback__button-block">
-          <div class="feedback__field feedback__field--agree">
-            <input class="feedback__agree-input" type="checkbox" name="agree-personal-data" id="agree" checked="">
-            <label class="feedback__agree-label" for="agree">Нажимая на кнопку "Отправить", я даю своё согласие на обработку персональных данных</label>
-          </div>
-
-          <button class="feedback__button button" type="submit">Отправить</button>
-          <p class="feedback__note">
-            <span class="feedback__note-star">*</span> — обязательные
-            <span class="feedback__note-plus"> для заполнения</span> поля
-          </p>
-        </div>
+        <textarea class="callback__textarea" name="message" placeholder="Ваше сообщение"></textarea>
+        <p class="callback__note">
+          <span class="callback__note-star">*</span> — обязательные
+          <span class="callback__note-plus"> для заполнения</span> поля
+        </p>
+        <button type="submit" class="callback__button button">Отправить</button>
       </form>
     </div>
   </div>
@@ -518,30 +522,6 @@
     <h2 class="send-success__title">Ваши данные успешно отправлены</h2>
     <button type="button" class="send-success__button button">Закрыть</button>
   </div>
-
-  <div class="modal callback">
-    <div class="callback__wrapper">
-      <h2 class="callback__title">Оставьте Ваши контакты</h2>
-      <svg class="callback__close" width="14" height="14" tabindex="0">
-        <use xlink:href="#icon-close"></use>
-      </svg>
-      <form action="phpmailer/mail.php" class="callback__form">
-        <div class="callback__block callback__block--name">
-          <label class="callback__label" for="username">Имя:</label>
-          <input class="callback__textfield" id="username" name="name" type="text" placeholder="Ваше имя*" required="">
-        </div>
-        <div class="callback__block">
-          <label class="callback__label" for="phone">Номер телефона:</label>
-          <input class="callback__textfield" id="phone" name="phone" type="tel" placeholder="+7 (9__) __ __ __">
-        </div>
-        <button type="button" class="callback__button button">Отправить</button>
-      </form>
-
-    </div>
-
-    </div>
-
-  <!-- </div> -->
 
   <script src="js/libs/libs.min.js"></script>
   <script src="js/app/hamburger.min.js"></script>
@@ -558,36 +538,41 @@
       centerMode: true,
       centerPadding: '40px',
       variableWidth: true,
-      adaptiveHeight: true
+      adaptiveHeight: true,
 
       // autoplaySpeed: 2000,
       // fade: true,
 
       // the magic
-      // responsive: [{
+      responsive: [{
 
-      //   breakpoint: 320,
-      //   settings: {
+        breakpoint: 320,
+        settings: {
 
-      //   }
+        }
 
-      // }, {
+      }, {
 
-      //   breakpoint: 660,
-      //   settings: {
-      //     centerMode: true,
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '20px',
+          variableWidth: true,
+          adaptiveHeight: false,
+          focusOnSelect: true
+        }
 
-      //     focusOnSelect: true
-      //   }
+      }, {
 
-      // }, {
+        breakpoint: 1090,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '40px',
+          variableWidth: true,
+          // focusOnSelect: true
+        }
 
-      //   breakpoint: 1090,
-      //   settings: {
-
-      //   }
-
-      // }]
+      }]
     });
 
   </script>

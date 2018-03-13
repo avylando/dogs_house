@@ -10,7 +10,7 @@
   let header = document.querySelector('.page-header');
   let upArrow = document.querySelector('.up-arrow');
   let advantagesSection = document.querySelector('.advantages__wrapper');
-  let sliderSection = document.querySelector('.gallery__main-wrapper');
+  let sliderSection = document.querySelector('.gallery');
   let reviewsSection = document.querySelector('.reviews');
   let priceSection = document.querySelector('.price');
   let contactsSection = document.querySelector('.contacts');
@@ -94,11 +94,11 @@
       }
 
       if (currentWidth < tabletWidth) {
-        scrollValueComparator(scrollTop, 50, 1200, 1800, 2700, 3200);
+        scrollValueComparator(scrollTop, 650, 1950, 2450, 3250, 4900);
       }
 
       if (currentWidth >= tabletWidth && currentWidth < desktopWidth) {
-        scrollValueComparator(scrollTop, 100, 1050, 1700, 2600, 3200);
+        scrollValueComparator(scrollTop, 970, 1800, 2500, 3300, 4400);
       }
 
       if (currentWidth >= desktopWidth) {

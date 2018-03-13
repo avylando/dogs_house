@@ -14,8 +14,6 @@
     const URL = '/phpmailer/mail.php';
     let xhr = new XMLHttpRequest();
 
-    xhr.responseType = 'json';
-
     xhr.addEventListener('load', function () {
       switch (xhr.status) {
         case ServerStatus.OK: sendSuccess();

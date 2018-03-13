@@ -64,8 +64,8 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -92,7 +92,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: $slick-font-family;
-        font-size: 40px;
+        font-size: 25px;
         line-height: 1;
         color: $slick-arrow-color;
         text-shadow: 1px 1px 1px#000000;
@@ -100,6 +100,14 @@ $slick-opacity-not-active: 0.25 !default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+  @media (min-width: 660px) {
+    height: 40px;
+    width: 40px;
+    &:before {
+      font-size: 40px;
+    }
+  }
 }
 
 .slick-prev {

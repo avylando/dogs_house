@@ -39,7 +39,12 @@
 }
 
 .page-header__author {
-  padding-left: 70px;
+  display: flex;
+  padding-left: 20px;
+}
+
+.page-header__illustration {
+  margin-right: 10px;
 }
 
 .page-header__author-name {
@@ -122,8 +127,6 @@
 @media (min-width: $tablet-width) {
   .page-header {
     text-transform: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   .page-header__mini {
@@ -185,6 +188,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   .page-header__nav {
     font-size: 18px;

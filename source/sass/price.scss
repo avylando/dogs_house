@@ -1,6 +1,6 @@
 .price {
   background-color: $add-bg;
-  padding-top: 75px;
+  padding-top: 50px;
   padding-bottom: 75px;
 
   // .price__illustration {
@@ -50,12 +50,11 @@
 }
 
 .price__illustration {
-  width: 500px;
-  padding: 20px;
+  display: none;
 }
 
 .price__description {
-  width: calc(100% - 650px);
+  width: 100%;
 }
 
 .price__table {
@@ -65,8 +64,8 @@
 
   td {
     text-align: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-bottom: 2px solid $firmcolor;
 
     &:nth-child(odd) {
@@ -76,10 +75,11 @@
 }
 
 .price__item {
-  font-size: 20px;
+  font-size: 17px;
+  white-space: nowrap;
 
   &--title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -92,16 +92,99 @@
 
 .price__note {
   display: inline-block;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .price__sub-text {
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 30px;
   font-weight: bold;
   text-align: center;
   width: 100%;
   margin-top: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    padding-top: 75px;
+  }
+
+  .price__wrapper {
+    align-items: center;
+  }
+
+  .price__title {
+    margin-bottom: 60px;
+  }
+
+  .price__illustration {
+    display: block;
+    width: 40%;
+    padding: 20px;
+  }
+
+  .price__description {
+    width: 57%;
+  }
+
+  .price__table {
+    td {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .price__item {
+    font-size: 18px;
+
+    &--title {
+      font-size: 21px;
+    }
+  }
+
+  .price__note {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  .price__sub-text {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__illustration {
+    width: 500px;
+  }
+
+  .price__description {
+    width: calc(100% - 650px);
+  }
+
+  .price__table {
+    td {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+  }
+
+  .price__item {
+    font-size: 20px;
+
+    &--title {
+      font-size: 24px;
+    }
+  }
+
+  .price__note {
+    font-size: 11px;
+  }
+
+  .price__sub-text {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }

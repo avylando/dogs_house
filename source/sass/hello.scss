@@ -1,7 +1,8 @@
 .hello {
   position: relative;
-  padding-top: 200px;
+  padding-top: 140px;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 .hello__head {
@@ -10,7 +11,7 @@
   width: 90%;
   height: 170px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   // opacity: 0;
 }
 
@@ -24,8 +25,8 @@
 // }
 
 .hello__title {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 42px;
   text-align: center;
   width: 90%;
   margin: 0 auto;
@@ -35,8 +36,8 @@
 .hello__sub-title {
   font-family: "Bell";
   font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 40px;
   text-transform: uppercase;
   color: $firmcolor;
   width: 100%;
@@ -50,18 +51,18 @@
   // bottom: -50px;
   // left: 0;
   // right: 0;
-  padding-top: 470px;
+  padding-top: 245px;
   margin: 0 auto;
   width: auto;
   max-width: 900px;
-  height: 800px;
+  height: 400px;
   opacity: 0;
   background-image: url('../img/dog-table.png');
   background-size: contain;
   background-position-x: center;
-  background-position-y: center;
+  background-position-y: bottom;
   background-repeat: no-repeat;
-  transform: translateY(540px);
+  transform: translateY(240px);
 }
 
 .hello__poster--show {
@@ -76,9 +77,9 @@
 }
 
 .hello__text {
-  width: 75%;
-  font-size: 28px;
-  line-height: 42px;
+  width: 310px;
+  font-size: 13px;
+  line-height: 18px;
   text-align: center;
   margin: 0 auto;
 }
@@ -90,10 +91,10 @@
   bottom: 0;
   font-family: inherit;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 9px;
   font-weight: 700;
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 70px;
   margin: 0 auto;
   background-image: url('../img/bone.png');
   background-position: center center;
@@ -113,29 +114,77 @@
   }
 }
 
+@media (min-width: 380px) {
+  .hello__poster {
+    height: 500px;
+    padding-top: 290px;
+  }
+
+  .hello__text {
+    font-size: 17px;
+    line-height: 20px;
+    width: 370px;
+  }
+
+  .hello__button {
+    font-size: 11px;
+    width: 200px;
+    height: 100px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .hello {
+    padding-top: 200px;
+    padding-bottom: 50px;
     // height: 560px;
     // filter: blur(5px);
   }
 
   .hello__head {
-    width: 80%;
-    height: 170px;
+    width: 95%;
+    margin-bottom: 100px;
   }
 
   .hello__title {
-    font-size: 45px;
-    line-height: 45px;
+    font-size: 55px;
+    line-height: 60px;
   }
 
   .hello__sub-title {
-    font-size: 20px;
+    font-size: 60px;
     line-height: 30px;
+  }
+
+  .hello__text {
+    width: 490px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .hello__poster {
+    width: 75%;
+    height: 600px;
+    padding-top: 355px;
+  }
+
+  .hello__button {
+    bottom: 10px;
+    font-size: 13px;
+    width: 225px;
+    height: 105px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .hello {
+    padding-bottom: 100px;
+  }
+
+  .hello__head {
+    width: 80%;
+  }
+
   .hello__title {
     font-size: 72px;
     line-height: 72px;
@@ -145,6 +194,25 @@
   .hello__sub-title {
     font-size: 72px;
     line-height: 72px;
+  }
+
+  .hello__poster {
+    width: 80%;
+    height: 800px;
+    padding-top: 470px;
+  }
+
+  .hello__text {
+    width: 75%;
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .hello__button {
+    bottom: 0;
+    font-size: 14px;
+    width: 300px;
+    height: 150px;
   }
 
 }

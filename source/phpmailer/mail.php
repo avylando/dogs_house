@@ -10,19 +10,8 @@ date_default_timezone_set('Etc/UTC');
 require 'PHPMailerAutoload.php';
 
 $name = $_POST['name'];
-$surname = $_POST['surname'];
 $phone = $_POST['phone'];
-$email = $_POST['email'];
-$additionally = $_POST['additionally'];
-
-// Принимаем UTM-метки
-
-$utm_source = $_POST['utm_source'];
-$utm_medium = $_POST['utm_medium'];
-$utm_campaign = $_POST['utm_campaign'];
-$utm_content = $_POST['utm_content'];
-$utm_term = $_POST['utm_term'];
-
+$message = $_POST['message'];
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
@@ -41,7 +30,7 @@ $mail->SMTPDebug = 0;
 $mail->Debugoutput = 'html';
 
 //Set the hostname of the mail server
-$mail->Host = 'smtp.mail.ru';
+$mail->Host = 'smtp.yandex.ru';
 // use
 // $mail->Host = gethostbyname('smtp.mail.ru');
 // if your network does not support SMTP over IPv6
@@ -56,36 +45,32 @@ $mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "roadtoawe@mail.ru";
+$mail->Username = "houseofdogs@yandex.ru";
 
 //Password to use for SMTP authentication
-$mail->Password = "supernatural123";
+$mail->Password = "Qwerty100%";
 
 //Set who the message is to be sent from
-$mail->setFrom('roadtoawe@mail.ru', 'SiteBot');
+$mail->setFrom("houseofdogs@yandex.ru", "Dog's House");
 
 //Set an alternative reply-to address
 $mail->addReplyTo('replyto@example.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('avylando@gmail.com', 'Anatoly Dolgov');
+$mail->addAddress('Olga-Struchkova@yandex.ru', 'Ольга Стручкова');
 
 //Set the subject line
-$mail->Subject = 'Заявка из портфолио';
+$mail->Subject = "Новое сообщение от Dog's House";
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 // $mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
 
 //Replace the plain text body with one created manually
-$mail->Body = "Привет! " .$name. " " .$surname. " оставил заявку!
-<br>Его почта: " .$email. " телефон: " .$phone.
-"<br>Дополнительная информация: " .$additionally.
-// "<br><br>Пользователь пришел из: " .$utm_source.
-// "<br>Тип трафика: " .$utm_medium.
-// "<br>Название кампании: " .$utm_campaign.
-// "<br>Идентификатор объявления: " .$utm_content.
-// "<br>Ключевое слово: " .$utm_term;
+$mail->Body = "Привет! Пользователь по имени " .$name. " оставил заявку!
+<br>Его телефон: " .$phone.
+"<br>Дополнительная информация: " .$message.
+
 
 //Attach an image file
 $mail->addAttachment($_FILES['upload']['tmp_name'], $_FILES['upload']['name']);
@@ -105,29 +90,29 @@ if (!$mail->send()) {
 /* https://api.telegram.org/bot454235322:AAGdoQuXnC5ZvZgG0Mu_2aC7XoP0rVrwAok/getUpdates,
 где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
 
-$token = "454235322:AAGdoQuXnC5ZvZgG0Mu_2aC7XoP0rVrwAok";
-$chat_id = "-295872599";
-$arr = array(
-  "Имя пользователя: " => $name,
-  "Фамилия:" => $surname,
-  "Телефон: " => $phone,
-  "Email: " => $email,
-  "Дополнительно: " => $additionally
-  // "Пользователь пришел из: " => $utm_source,
-  // "Тип трафика: " => $utm_medium,
-  // "Название кампании: " => $utm_campaign,
-  // "Идентификатор объявления: " => $utm_content,
-  // "Ключевое слово: " => $utm_term
-);
+// $token = "454235322:AAGdoQuXnC5ZvZgG0Mu_2aC7XoP0rVrwAok";
+// $chat_id = "-295872599";
+// $arr = array(
+//   "Имя пользователя: " => $name,
+//   "Фамилия:" => $surname,
+//   "Телефон: " => $phone,
+//   "Email: " => $email,
+//   "Дополнительно: " => $additionally
+//   // "Пользователь пришел из: " => $utm_source,
+//   // "Тип трафика: " => $utm_medium,
+//   // "Название кампании: " => $utm_campaign,
+//   // "Идентификатор объявления: " => $utm_content,
+//   // "Ключевое слово: " => $utm_term
+// );
 
-foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
-};
+// foreach($arr as $key => $value) {
+//   $txt .= "<b>".$key."</b> ".$value."%0A";
+// };
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+// $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-if ($sendToTelegram) {
-  echo "Message sent!";
-} else {
-  echo "Error";
-}
+// if ($sendToTelegram) {
+//   echo "Message sent!";
+// } else {
+//   echo "Error";
+// }
