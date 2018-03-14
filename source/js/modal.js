@@ -12,6 +12,16 @@
 
   let blackout = document.querySelector('.blackout');
 
+  // Blackout handler modal close
+
+  let blackoutClickHandler = function () {
+    if (callback.classList.contains('modal--show')) {
+      callback.classList.remove('modal--show');
+      callback.classList.add('modal--close');
+      blackout.classList.remove('blackout--show');
+    }
+  }
+
   let modalShowClickHandler = function (modal, closeButton, handlerEsc, handlerEnter) {
     if (modal.classList.contains('modal--close')) {
       modal.classList.remove('modal--close');
@@ -24,6 +34,7 @@
 
     window.addEventListener('keydown', handlerEsc);
     closeButton.addEventListener('keydown', handlerEnter);
+    blackout.addEventListener('click', blackoutClickHandler);
   }
 
   let modalCloseClickHandler = function (modal, closeButton, handlerEsc, handlerEnter) {
@@ -34,29 +45,9 @@
 
       window.removeEventListener('keydown', handlerEsc);
       closeButton.removeEventListener('keydown', handlerEnter);
+      blackout.removeEventListener('click', blackoutClickHandler);
     }
   }
-
-
-  // let feedbackShowClickHandler = function () {
-  //   modalShowClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
-  // }
-
-  // let feedbackCloseClickHandler = function () {
-  //   modalCloseClickHandler(feedback, fbCloseButton, feedbackCloseEscHandler, feedbackCloseEnterHandler);
-  // }
-
-  // let feedbackCloseEscHandler = function (evt) {
-  //   if (evt.keyCode === 27) {
-  //     feedbackCloseClickHandler();
-  //   }
-  // }
-
-  // let feedbackCloseEnterHandler = function (evt) {
-  //   if (evt.keyCode === 13) {
-  //     feedbackCloseClickHandler();
-  //   }
-  // }
 
   let callbackShowClickHandler = function () {
     modalShowClickHandler(callback, cbCloseButton, callbackCloseEscHandler, callbackCloseEnterHandler);
@@ -78,8 +69,6 @@
     }
   }
 
-  // fbActivateButton.addEventListener('click', feedbackShowClickHandler, true);
-  // fbCloseButton.addEventListener('click', feedbackCloseClickHandler);
   cbButton.addEventListener('click', callbackShowClickHandler, true);
   cbButtonDouble.addEventListener('click', callbackShowClickHandler, true);
   cbCloseButton.addEventListener('click', callbackCloseClickHandler);
@@ -101,7 +90,5 @@
   }
 
   ssCloseButton.addEventListener('click', successCloseClickHandler);
-
-  // Blackout handler modal close
 
 })();

@@ -725,7 +725,7 @@ a {
       height: 35px; } }
   @media (min-width: 1090px) {
     .up-arrow--show {
-      bottom: 30px;
+      bottom: 10px;
       right: 30px; } }
 
 .blackout {
@@ -1214,7 +1214,7 @@ a {
   position: relative;
   padding-top: 140px;
   padding-bottom: 100px;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .hello__head {
   z-index: 2;
@@ -2233,8 +2233,7 @@ a {
 
 .callback {
   top: 25%;
-  width: 400px;
-  min-width: 280px;
+  width: 280px;
   font-size: 12px; }
 
 .callback__wrapper {
@@ -2278,6 +2277,7 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  width: 100%;
   padding: 10px; }
 
 .callback__textarea {
@@ -2289,6 +2289,10 @@ a {
 
 .callback__button {
   margin: 30px auto 0; }
+
+@media (min-width: 680px) {
+  .callback {
+    width: 400px; } }
 
 .send-success {
   top: 30%;

@@ -1,7 +1,6 @@
 .callback {
   top: 25%;
-  width: 400px;
-  min-width: 280px;
+  width: 280px;
   font-size: 12px;
 }
 
@@ -47,6 +46,7 @@
 
 .callback__textfield {
   flex-grow: 1;
+  width: 100%;
   padding: 10px;
 }
 
@@ -60,6 +60,12 @@
 
 .callback__button {
   margin: 30px auto 0;
+}
+
+@media (min-width: $tablet-width) {
+  .callback {
+    width: 400px;
+  }
 }
 
 // // .callback__wrapper {
