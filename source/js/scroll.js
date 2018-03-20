@@ -78,7 +78,41 @@
     }
   }
 
-  window.addEventListener('load', function () {
+  function showSectionHandler (evt, section, btn) {
+    evt.preventDefault();
+    window.animateScrollTo(section);
+    checkActiveItems(btn);
+  };
+
+  // Hashchange event
+
+  function hashchangeHandler (evt) {
+    switch (window.location.hash) {
+      case '#about':
+        showSectionHandler(evt, advantagesSection, advBtn);
+        break;
+      case '#gallery':
+        showSectionHandler(evt, sliderSection, galleryBtn);
+        break;
+      case '#price':
+        showSectionHandler(evt, priceSection, priceBtn);
+        break;
+      case '#reviews':
+        showSectionHandler(evt, reviewsSection, reviewsBtn);
+        break;
+      case '#contacts':
+        showSectionHandler(evt, contactsSection, contactsBtn);
+        break;
+      default: window.animateScrollTo(0);
+    }
+  };
+
+  window.addEventListener('hashchange', function (evt) {
+      hashchangeHandler(evt);
+  });
+
+  window.addEventListener('load', function (evt) {
+    hashchangeHandler(evt);
     poster.classList.add('hello__poster--show');
     // setTimeout(banner.classList.add('hello__head--show'), 1);
     window.addEventListener('scroll', function () {
@@ -113,36 +147,26 @@
     window.animateScrollTo(0);
   });
 
-  // Menu items scroll
+  // // Menu items scroll
 
-  advBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    window.animateScrollTo(advantagesSection);
-    checkActiveItems(advBtn);
-  })
+  // advBtn.addEventListener('click', function (evt) {
+  //   showSectionHandler(evt, advantagesSection, advBtn);
+  // })
 
-  galleryBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    window.animateScrollTo(sliderSection);
-    checkActiveItems(galleryBtn);
-  })
+  // galleryBtn.addEventListener('click', function (evt) {
+  //   showSectionHandler(evt, sliderSection, galleryBtn);
+  // })
 
-  priceBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    window.animateScrollTo(priceSection);
-    checkActiveItems(priceBtn);
-  })
+  // priceBtn.addEventListener('click', function (evt) {
+  //   showSectionHandler(evt, priceSection, priceBtn);
+  // })
 
-  reviewsBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    window.animateScrollTo(reviewsSection);
-    checkActiveItems(reviewsBtn);
-  })
+  // reviewsBtn.addEventListener('click', function (evt) {
+  //   showSectionHandler(evt, reviewsSection, reviewsBtn);
+  // })
 
-  contactsBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    window.animateScrollTo(contactsSection);
-    checkActiveItems(contactsBtn);
-  })
+  // contactsBtn.addEventListener('click', function (evt) {
+  //   showSectionHandler(evt, contactsSection, contactsBtn);
+  // })
 
 })();
