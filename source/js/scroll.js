@@ -7,21 +7,21 @@
   const desktopWidth = 1090;
   let currentWidth = document.body.clientWidth;
 
-  let header = document.querySelector('.page-header');
-  let upArrow = document.querySelector('.up-arrow');
-  let advantagesSection = document.querySelector('.advantages__wrapper');
-  let sliderSection = document.querySelector('.gallery');
-  let reviewsSection = document.querySelector('.reviews');
-  let priceSection = document.querySelector('.price');
-  let contactsSection = document.querySelector('.contacts');
-  let advBtn = document.querySelector('.menu__link--adv');
-  let galleryBtn = document.querySelector('.menu__link--gallery');
-  let priceBtn = document.querySelector('.menu__link--price');
-  let reviewsBtn = document.querySelector('.menu__link--reviews');
-  let contactsBtn = document.querySelector('.menu__link--contacts');
-  let menuItems = document.querySelectorAll('.menu__link');
-  let helloHead = document.querySelector('.hello__head');
-  let poster = document.querySelector('.hello__poster');
+  const header = document.querySelector('.page-header'),
+        upArrow = document.querySelector('.up-arrow'),
+        poster = document.querySelector(`.hello__poster`),
+        advantagesSection = document.querySelector('.advantages__wrapper'),
+        sliderSection = document.querySelector('.gallery'),
+        reviewsSection = document.querySelector('.reviews'),
+        priceSection = document.querySelector('.price'),
+        contactsSection = document.querySelector('.contacts'),
+        advBtn = document.querySelector('.menu__link--adv'),
+        galleryBtn = document.querySelector('.menu__link--gallery'),
+        priceBtn = document.querySelector('.menu__link--price'),
+        reviewsBtn = document.querySelector('.menu__link--reviews'),
+        contactsBtn = document.querySelector('.menu__link--contacts'),
+        menuItems = document.querySelectorAll('.menu__link'),
+        helloHead = document.querySelector('.hello__head');
 
   // Activate sections
 
@@ -81,13 +81,16 @@
   function showSectionHandler (evt, section, btn) {
     evt.preventDefault();
     window.animateScrollTo(section);
-    checkActiveItems(btn);
+    if (btn) checkActiveItems(btn);
   };
 
   // Hashchange event
 
   function hashchangeHandler (evt) {
     switch (window.location.hash) {
+      case `#main`:
+        showSectionHandler(evt, poster);
+        break;
       case '#about':
         showSectionHandler(evt, advantagesSection, advBtn);
         break;
