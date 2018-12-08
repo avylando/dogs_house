@@ -13,7 +13,7 @@
 .contacts__text {
   font-size: 16px;
   text-align: center;
-  width: 95%;
+  width: 100%;
   margin-right: 0;
 
   span {
@@ -48,6 +48,25 @@
 .contacts__interactive-map {
   width: 100%;
   height: 320px;
+}
+
+.contacts__messengers {
+  position: relative;
+  top: -14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__messenger-link {
+  margin-right: 10px;
+}
+
+.contacts__messenger-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
 }
 
 @media (min-width: $tablet-width) {
@@ -176,5 +195,9 @@
   .contacts__interactive-map {
     width: 100%;
     height: 320px;
+  }
+
+  .contacts__messengers {
+    display: inline-flex;
   }
 }

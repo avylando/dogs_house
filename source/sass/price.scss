@@ -3,6 +3,21 @@
   padding-top: 50px;
   padding-bottom: 75px;
 
+  .price__text,
+  .price__value {
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .price__half-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .price__table td.price__table-outer {
+    padding: 0;
+  }
+
   // .price__illustration {
   //   transform: translateX(-1000px);
   //   opacity: 0;
@@ -61,6 +76,11 @@
   // font-size: 24px;
   width: 100%;
   border-collapse: collapse;
+}
+
+.price__item {
+  font-size: 15px;
+  white-space: nowrap;
 
   td {
     text-align: center;
@@ -72,20 +92,27 @@
       border-right: 2px solid $firmcolor;
     }
   }
-}
-
-.price__item {
-  font-size: 17px;
-  white-space: nowrap;
 
   &--title {
     font-size: 20px;
     font-weight: bold;
+
+    .price__text--empty {
+      border-bottom-style: hidden;
+    }
   }
 
   &:last-child {
     td {
       border-bottom: none;
+    }
+  }
+
+  &--title,
+  &--subtitle {
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -106,6 +133,24 @@
   margin-top: 80px;
 }
 
+.price__note {
+  font-size: 11px;
+}
+
+.price__sub-text {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.price__text,
+.price__value {
+  width: 50%;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .price {
     padding-top: 75px;
@@ -119,15 +164,15 @@
     margin-bottom: 60px;
   }
 
-  .price__illustration {
-    display: block;
-    width: 40%;
-    padding: 20px;
-  }
+  // .price__illustration {
+  //   display: block;
+  //   width: 40%;
+  //   padding: 20px;
+  // }
 
-  .price__description {
-    width: 57%;
-  }
+  // .price__description {
+  //   width: 57%;
+  // }
 
   .price__table {
     td {
@@ -157,25 +202,33 @@
 
 @media (min-width: $desktop-width) {
   .price__illustration {
-    width: 500px;
+    display: block;
+    width: 350px;
+    padding: 20px;
   }
 
   .price__description {
-    width: calc(100% - 650px);
-  }
-
-  .price__table {
-    td {
-      padding-top: 35px;
-      padding-bottom: 35px;
-    }
+    width: calc(100% - 600px);
   }
 
   .price__item {
     font-size: 20px;
 
+    td {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
     &--title {
       font-size: 24px;
+    }
+
+    &--title,
+    &--subtitle {
+      td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
     }
   }
 
@@ -186,5 +239,14 @@
   .price__sub-text {
     font-size: 32px;
     line-height: 36px;
+  }
+
+  .price__text,
+  .price__value {
+    width: 50%;
+
+    &--bold {
+      font-weight: 600;
+    }
   }
 }

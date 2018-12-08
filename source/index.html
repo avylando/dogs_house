@@ -157,12 +157,12 @@
             </li>
             <li class="menu__item">
               <a class="menu__link menu__link--gallery" href="#gallery">
-                <span>Галерея</span>
+                <span>Условия содержания</span>
               </a>
             </li>
             <li class="menu__item">
               <a class="menu__link menu__link--price" href="#price">
-                <span>Расценки</span>
+                <span>Цены</span>
               </a>
             </li>
             <li class="menu__item">
@@ -258,7 +258,7 @@
     <section id="group-3" class="gallery">
       <div class="container">
         <div class="gallery__main-wrapper gallery__main-wrapper--nojs">
-          <h1 class="gallery__title">Наши постояльцы</h1>
+          <h1 class="gallery__title">Условия содержания</h1>
           <div class="gallery__wrapper">
             <ul class="gallery__slider">
               <li class="gallery__slide">
@@ -321,6 +321,24 @@
                     <img class="gallery__image" src="img/10.jpg" data-large-src="img/10.jpg" width="300" height="100">
                   </picture>
               </li>
+              <li class="gallery__slide">
+                <picture>
+                  <source media="(max-width: 1090px)" srcset="img/11-min.jpg">
+                  <img class="gallery__image" src="img/11.jpg" data-large-src="img/11.jpg" width="300" height="100">
+                </picture>
+              </li>
+              <li class="gallery__slide">
+                <picture>
+                  <source media="(max-width: 1090px)" srcset="img/12-min.jpg">
+                  <img class="gallery__image" src="img/12.jpg" data-large-src="img/12.jpg" width="300" height="100">
+                </picture>
+              </li>
+              <li class="gallery__slide">
+                <picture>
+                  <source media="(max-width: 1090px)" srcset="img/13-min.jpg">
+                  <img class="gallery__image" src="img/13.jpg" data-large-src="img/13.jpg" width="300" height="100">
+                </picture>
+            </li>
             </ul>
           </div>
         </div>
@@ -331,28 +349,58 @@
     <section id="group-4" class="price price--nojs">
 
       <div class="container">
-        <h2 class="price__title">Расценки</h2>
+        <h2 class="price__title">Цены</h2>
         <div class="price__wrapper">
           <div class="price__illustration">
             <img src="img/russel.png" alt="jack-russel" class="price__image" width="493" height="384">
           </div>
           <div class="price__description">
-            <table class="price__table">
+            <table class="price__table" table-layout="fixed">
               <tr class="price__item price__item--title">
-                <td class="price__text">Проживание</td>
-                <td class="price__text">Цена (за день)*</td>
+                <td class="price__text price__text--empty"></td>
+                <td class="price__text price__text--bold">Цена</td>
+              </tr>
+              <tr class="price__item price__item--subtitle">
+                <td class="price__text"></td>
+                <td class="price__table-outer">
+                    <table class="price__half-table">
+                      <tr class="price__item">
+                          <td class="price__text">до 14 дней</td>
+                          <td class="price__text">больше 14 дней</td>
+                      </tr>
+                    </table>
+                </td>
               </tr>
               <tr class="price__item">
-                <td class="price__text">до 14 дней</td>
-                <td class="price__value">600 р.</td>
+                <td class="price__text price__text--bold">Проживание</td>
+                <td class="price__table-outer">
+                    <table class="price__half-table">
+                      <tr class="price__item">
+                          <td class="price__value price__value--half">600 руб./день</td>
+                          <td class="price__value price__value--half">500 руб./день</td>
+                      </tr>
+                    </table>
+                </td>
               </tr>
               <tr class="price__item">
-                <td class="price__text">больше 14 дней</td>
-                <td class="price__value">500 р.</td>
+                <td class="price__text price__text--bold">Занятие послушанием с кинологом</td>
+                <td class="price__value">500 руб./1 час</td>
+              </tr>
+              <tr class="price__item">
+                  <td class="price__text price__text--bold">Кормление нашим кормом или натуральной пищей</td>
+                  <td class="price__value">100 руб./день</td>
+              </tr>
+              <tr class="price__item">
+                <td class="price__text price__text--bold">Доставка собаки в одну сторону (в пределах г. Иркутска)</td>
+                <td class="price__value">500 руб./поездка</td>
+              </tr>
+              <tr class="price__item">
+                <td class="price__text price__text--bold">Стрижка собаки по вашему запросу</td>
+                <td class="price__value">от 1000 руб./стрижка</td>
               </tr>
             </table>
-            <small class="price__note">* В стоимость не входит питание собаки. Корм предоставляется хозяином. <br>
-              Возможно кормление питомца натуральной пищей или сухим кормом за дополнительную плату</small>
+            <!-- <small class="price__note">* В стоимость не входит питание собаки. Корм предоставляется хозяином. <br>
+              Возможно кормление питомца натуральной пищей или сухим кормом за дополнительную плату</small> -->
           </div>
         </div>
         <p class="price__sub-text">Каждый год Dogs' House посещают более 80 собак,
@@ -427,10 +475,20 @@
                 <span>Адрес:</span> г. Иркутск, СНТ "Железнодорожник"
                 <br> в Свердловском районе, дом 35А</p>
             </div>
-            <div class="contacts__block contacts__block--mail">
+            <div class="contacts__block contacts__block--phone">
               <p class="contacts__text">
                 <span>Телефон:</span>
                 <a href="#">994-914, 89149511554</a>
+                <div class="contacts__messengers">
+                  <a class="contacts__messenger-link" href="viber://chat?number=79149511554">
+                  <span class="visually-hidden">Viber</span>
+                  <img class="contacts__messenger-icon" src="img/viber_icon.png" alt="viber_icon" srcset="">
+                  </a>
+                  <a class="contacts__messenger-link" href="https://api.whatsapp.com/send?phone=79149511554">
+                    <span class="visually-hidden">Whatsapp</span>
+                    <img class="contacts__messenger-icon" src="img/whatsapp_icon.png" alt="whatsapp_icon" srcset="">
+                  </a>
+                </div>
               </p>
             </div>
             <div class="contacts__block contacts__block--mail">
