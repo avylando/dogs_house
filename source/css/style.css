@@ -1787,7 +1787,7 @@ a {
     width: 350px;
     padding: 20px; }
   .price__description {
-    width: calc(100% - 600px); }
+    width: calc(100% - 400px); }
   .price__item {
     font-size: 20px; }
     .price__item td {
